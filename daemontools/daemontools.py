@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+#
+#    python-daemontools
+#
+#    by Pavel Vorobyov <aquavitale@yandex.ru>
+#    https://github.com/viert/daemontools
+# 
 
 import os
 import atexit
