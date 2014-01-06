@@ -20,7 +20,10 @@ def __removePidfile(pidfile):
   except:
     pass
 
-def startDaemon(mainFunc, pidfile, termFunc=__defaultTermHandler):
+def startDaemon(mainFunc, pidfile=None, termFunc=__defaultTermHandler, closeStds=True):
+  if closeStds:
+    os.closerange(0,3)
+
   if not pidfile is None:
     atexit.register(__removePidfile, pidfile)
 
